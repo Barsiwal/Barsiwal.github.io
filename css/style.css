@@ -1,4 +1,4 @@
-/* line 5, _htext.scss */
+/* line 6, _htext.scss */
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -6,23 +6,24 @@
   cursor: default;
 }
 
-/* line 13, _htext.scss */
+/* line 14, _htext.scss */
 ul {
+  border-radius: 5px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-/* line 18, _htext.scss */
+/* line 20, _htext.scss */
 body {
-  background-color: #FF3100;
+  background-color: #A7383D;
 }
 
-/* line 21, _htext.scss */
+/* line 23, _htext.scss */
 section {
   padding: 1px;
 }
-/* line 23, _htext.scss */
+/* line 25, _htext.scss */
 section ul {
   display: flex;
   font-family: 'Lato', sans-serif;
@@ -32,12 +33,12 @@ section ul {
   text-align: center;
   width: 80%;
 }
-/* line 32, _htext.scss */
+/* line 34, _htext.scss */
 section ul li {
   padding: 20px;
   width: 20%;
 }
-/* line 35, _htext.scss */
+/* line 37, _htext.scss */
 section ul li span {
   color: rgba(0, 0, 0, 0.6);
   display: inline-block;
@@ -47,40 +48,40 @@ section ul li span {
   line-height: 1;
   z-index: 1;
 }
-/* line 48, _htext.scss */
-section ul.grid1 li:nth-child(odd) {
-  background-color: #d92900;
-}
 /* line 50, _htext.scss */
-section ul.grid1 li:nth-child(odd) span:after {
-  color: #d92900;
+section ul.grid1 li:nth-child(odd) {
+  background-color: #4cb83c;
 }
-/* line 55, _htext.scss */
-section ul.grid1 li:nth-child(even) {
-  background-color: #a72000;
+/* line 52, _htext.scss */
+section ul.grid1 li:nth-child(odd) span:after {
+  color: #4cb83c;
 }
 /* line 57, _htext.scss */
-section ul.grid1 li:nth-child(even) span:after {
-  color: #a72000;
+section ul.grid1 li:nth-child(even) {
+  background-color: #2f7024;
 }
-/* line 63, _htext.scss */
-section ul.grid2 li:nth-child(even) {
-  background-color: #d92900;
+/* line 59, _htext.scss */
+section ul.grid1 li:nth-child(even) span:after {
+  color: #2f7024;
 }
 /* line 65, _htext.scss */
-section ul.grid2 li:nth-child(even) span:after {
-  color: #d92900;
+section ul.grid2 li:nth-child(even) {
+  background-color: #4cb83c;
 }
-/* line 71, _htext.scss */
-section ul.grid2 li:nth-child(odd) {
-  background-color: #a72000;
+/* line 67, _htext.scss */
+section ul.grid2 li:nth-child(even) span:after {
+  color: #4cb83c;
 }
 /* line 73, _htext.scss */
+section ul.grid2 li:nth-child(odd) {
+  background-color: #2f7024;
+}
+/* line 75, _htext.scss */
 section ul.grid2 li:nth-child(odd) span:after {
-  color: #a72000;
+  color: #2f7024;
 }
 
-/* line 83, _htext.scss */
+/* line 85, _htext.scss */
 ul[class*="grid"] li[class*="letter"] span:before,
 ul[class*="grid"] li[class*="letter"] span:after {
   position: absolute;
@@ -93,82 +94,82 @@ ul[class*="grid"] li[class*="letter"] span:after {
   transition: all .4s ease;
 }
 
-/* line 96, _htext.scss */
+/* line 98, _htext.scss */
 li[class*="left"] span:before {
   transform: scale(1.08, 1) skew(0deg, 1deg);
   color: rgba(0, 0, 0, 0.12);
   text-shadow: none;
 }
 
-/* line 101, _htext.scss */
+/* line 103, _htext.scss */
 li[class*="left"] span:after {
   text-shadow: -1px 0px 0px rgba(255, 255, 255, 0.1), 3px 0px 1px rgba(0, 0, 0, 0.4);
   transform: rotateY(-18deg);
 }
 
-/* line 106, _htext.scss */
+/* line 108, _htext.scss */
 li[class*="left"]:hover span:after {
   transform: rotateY(-40deg);
 }
 
-/* line 110, _htext.scss */
+/* line 112, _htext.scss */
 li[class*="left"]:hover span:before {
   transform: scale(0.85, 1) skew(0deg, 20deg);
 }
 
-/* line 115, _htext.scss */
+/* line 117, _htext.scss */
 .letter-left span:before,
 .letter-left span:after {
   transform-origin: 0 50%;
 }
 
-/* line 124, _htext.scss */
+/* line 126, _htext.scss */
 .letter-right span:before,
 .letter-right span:after {
   transform-origin: 100% 50%;
 }
 
-/* line 127, _htext.scss */
+/* line 129, _htext.scss */
 li[class*="right"] span:before {
   transform: scale(0.85, 1) skew(0deg, 1deg);
   color: rgba(0, 0, 0, 0.12);
   text-shadow: none;
 }
 
-/* line 132, _htext.scss */
+/* line 134, _htext.scss */
 li[class*="right"] span:after {
   text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.1), -3px 0px 1px rgba(0, 0, 0, 0.4);
   transform: rotateY(18deg);
 }
 
-/* line 137, _htext.scss */
+/* line 139, _htext.scss */
 li[class*="right"]:hover span:after {
   transform: rotateY(45deg);
 }
 
-/* line 141, _htext.scss */
+/* line 143, _htext.scss */
 li[class*="right"]:hover span:before {
   transform: scale(0.8, 1) skew(0deg, -20deg);
 }
 
-/* line 145, _htext.scss */
+/* line 147, _htext.scss */
 .grid1 li:nth-child(odd):hover span:after {
-  color: #f32e00;
+  color: #59c44a;
 }
 
-/* line 148, _htext.scss */
+/* line 150, _htext.scss */
 .grid2 li:nth-child(even):hover span:after {
-  color: #f32e00;
+  color: #59c44a;
 }
 
-/* line 151, _htext.scss */
+/* line 153, _htext.scss */
 .grid1 li:nth-child(even):hover span:after {
-  color: #c12500;
+  color: #37832a;
 }
 
-/* line 154, _htext.scss */
+/* line 156, _htext.scss */
 .grid2 li:nth-child(odd):hover span:after {
-  color: #c12500;
+  color: #37832a;
 }
 
 /* line 3, style.scss */

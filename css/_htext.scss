@@ -1,5 +1,6 @@
-$bg1:#D92900;
-$bg2:#A72000;
+$bg1:#4CB83C;
+$bg2:#2F7024;
+
 
 
 *{
@@ -11,12 +12,13 @@ $bg2:#A72000;
 
 
 ul{
+    border-radius: 5px;
     padding:0;
     margin:0;
     list-style: none;
 }
 body{
-    background-color: #FF3100;
+    background-color: #A7383D;
 }
 section{
     padding:1px;
