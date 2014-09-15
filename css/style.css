@@ -1,0 +1,218 @@
+/* line 5, _htext.scss */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+}
+
+/* line 13, _htext.scss */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 18, _htext.scss */
+body {
+  background-color: #FF3100;
+}
+
+/* line 21, _htext.scss */
+section {
+  padding: 1px;
+}
+/* line 23, _htext.scss */
+section ul {
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  font-size: 12em;
+  margin: 0 auto;
+  font-weight: 900;
+  text-align: center;
+  width: 80%;
+}
+/* line 32, _htext.scss */
+section ul li {
+  padding: 20px;
+  width: 20%;
+}
+/* line 35, _htext.scss */
+section ul li span {
+  color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  perspective: 550px;
+  transform-style: preserve-3d;
+  position: relative;
+  line-height: 1;
+  z-index: 1;
+}
+/* line 48, _htext.scss */
+section ul.grid1 li:nth-child(odd) {
+  background-color: #d92900;
+}
+/* line 50, _htext.scss */
+section ul.grid1 li:nth-child(odd) span:after {
+  color: #d92900;
+}
+/* line 55, _htext.scss */
+section ul.grid1 li:nth-child(even) {
+  background-color: #a72000;
+}
+/* line 57, _htext.scss */
+section ul.grid1 li:nth-child(even) span:after {
+  color: #a72000;
+}
+/* line 63, _htext.scss */
+section ul.grid2 li:nth-child(even) {
+  background-color: #d92900;
+}
+/* line 65, _htext.scss */
+section ul.grid2 li:nth-child(even) span:after {
+  color: #d92900;
+}
+/* line 71, _htext.scss */
+section ul.grid2 li:nth-child(odd) {
+  background-color: #a72000;
+}
+/* line 73, _htext.scss */
+section ul.grid2 li:nth-child(odd) span:after {
+  color: #a72000;
+}
+
+/* line 83, _htext.scss */
+ul[class*="grid"] li[class*="letter"] span:before,
+ul[class*="grid"] li[class*="letter"] span:after {
+  position: absolute;
+  content: attr(data-letter);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all .4s ease;
+}
+
+/* line 96, _htext.scss */
+li[class*="left"] span:before {
+  transform: scale(1.08, 1) skew(0deg, 1deg);
+  color: rgba(0, 0, 0, 0.12);
+  text-shadow: none;
+}
+
+/* line 101, _htext.scss */
+li[class*="left"] span:after {
+  text-shadow: -1px 0px 0px rgba(255, 255, 255, 0.1), 3px 0px 1px rgba(0, 0, 0, 0.4);
+  transform: rotateY(-18deg);
+}
+
+/* line 106, _htext.scss */
+li[class*="left"]:hover span:after {
+  transform: rotateY(-40deg);
+}
+
+/* line 110, _htext.scss */
+li[class*="left"]:hover span:before {
+  transform: scale(0.85, 1) skew(0deg, 20deg);
+}
+
+/* line 115, _htext.scss */
+.letter-left span:before,
+.letter-left span:after {
+  transform-origin: 0 50%;
+}
+
+/* line 124, _htext.scss */
+.letter-right span:before,
+.letter-right span:after {
+  transform-origin: 100% 50%;
+}
+
+/* line 127, _htext.scss */
+li[class*="right"] span:before {
+  transform: scale(0.85, 1) skew(0deg, 1deg);
+  color: rgba(0, 0, 0, 0.12);
+  text-shadow: none;
+}
+
+/* line 132, _htext.scss */
+li[class*="right"] span:after {
+  text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.1), -3px 0px 1px rgba(0, 0, 0, 0.4);
+  transform: rotateY(18deg);
+}
+
+/* line 137, _htext.scss */
+li[class*="right"]:hover span:after {
+  transform: rotateY(45deg);
+}
+
+/* line 141, _htext.scss */
+li[class*="right"]:hover span:before {
+  transform: scale(0.8, 1) skew(0deg, -20deg);
+}
+
+/* line 145, _htext.scss */
+.grid1 li:nth-child(odd):hover span:after {
+  color: #f32e00;
+}
+
+/* line 148, _htext.scss */
+.grid2 li:nth-child(even):hover span:after {
+  color: #f32e00;
+}
+
+/* line 151, _htext.scss */
+.grid1 li:nth-child(even):hover span:after {
+  color: #c12500;
+}
+
+/* line 154, _htext.scss */
+.grid2 li:nth-child(odd):hover span:after {
+  color: #c12500;
+}
+
+/* line 3, style.scss */
+header {
+  padding: 1px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+/* line 7, style.scss */
+header h1 {
+  font-size: 5em;
+  text-align: center;
+}
+
+/* line 16, style.scss */
+section {
+  margin: 30px 0;
+}
+/* line 18, style.scss */
+section p {
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 60px;
+}
+
+/* line 25, style.scss */
+footer {
+  height: 15%;
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+  font-style: normal;
+}
+/* line 33, style.scss */
+footer p:last-child {
+  font-size: .8em;
+}
+
+/* line 37, style.scss */
+body {
+  min-width: 1045px;
+}

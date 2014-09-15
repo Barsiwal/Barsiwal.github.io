@@ -1,0 +1,157 @@
+$bg1:#D92900;
+$bg2:#A72000;
+
+
+*{
+	box-sizing:border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	cursor:default
+}
+
+
+ul{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+body{
+    background-color: #FF3100;
+}
+section{
+    padding:1px;
+    ul{
+        
+        display:flex;
+        font-family: 'Lato', sans-serif;
+        font-size: 12em;
+        margin:0 auto;
+        font-weight:900;
+        text-align: center;
+        width:80%;
+        li{
+            padding:20px;
+            width:20%;
+            span{
+                color: hsla(0, 0%, 0%, 0.6);
+                display: inline-block;
+                perspective: 550px;
+                transform-style: preserve-3d;
+                position: relative;
+                line-height: 1;
+                z-index:1;
+            }
+        }       
+        
+        }
+    ul.grid1{
+                li:nth-child(odd){
+           background-color: $bg1; 
+                    span:after{
+                        color: $bg1 ;
+                    }
+            
+        }
+        li:nth-child(even){
+            background-color: $bg2;
+                    span:after{
+                        color: $bg2 ;
+                    }
+        }
+    }
+    ul.grid2{
+                li:nth-child(even){
+                    background-color: $bg1; 
+                 span:after{
+                        color: $bg1 ;
+                    }
+                    
+            
+        }
+        li:nth-child(odd){
+            background-color: $bg2;
+                span:after{
+                        color: $bg2 ;
+                 }
+        }
+    }
+    }
+// make span{relative} and ,:after ,:before absolute
+
+ul[class*="grid"] li[class*="letter"] span:before,
+ul[class*="grid"] li[class*="letter"] span:after  
+{
+    
+    position:absolute;
+    content:attr(data-letter);
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    z-index: 2;
+    transition:all .4s ease;
+}
+
+//******** left ***************
+li[class*="left"] span:before{
+    transform: scale(1.08, 1) skew(0deg, 1deg);
+    color: hsla(0, 0%, 0%, 0.12);
+    text-shadow:none;
+}
+li[class*="left"] span:after{
+    text-shadow:-1px 0px 0px hsla(360, 100%, 100%, 0.1),
+        3px 0px 1px hsla(0, 0%, 0%, 0.4);
+    transform: rotateY(-18deg);
+}
+li[class*="left"]:hover span:after {
+    transform: rotateY(-40deg);
+    
+}
+li[class*="left"]:hover span:before {
+    transform: scale(0.85,1) skew(0deg,20deg);
+}
+.letter-left span:before,
+.letter-left span:after
+{
+    transform-origin: 0 50%;
+}
+
+//************* right ******************
+
+
+.letter-right span:before,
+.letter-right span:after
+{
+    transform-origin: 100% 50%;
+}
+li[class*="right"] span:before{
+    transform: scale(0.85,1) skew(0deg,1deg);
+    color: hsla(0, 0%, 0%, 0.12);
+    text-shadow:none;
+}
+li[class*="right"] span:after{
+    text-shadow:1px 0px 0px hsla(360, 100%, 100%, 0.1),
+        -3px 0px 1px hsla(0, 0%, 0%, 0.4);
+    transform: rotateY(18deg);
+}
+li[class*="right"]:hover span:after {
+    transform: rotateY(45deg);
+    
+}
+li[class*="right"]:hover span:before {
+   transform: scale(0.8,1) skew(0deg,-20deg);
+}
+//************************* color lighten **********************
+.grid1 li:nth-child(odd):hover span:after{
+    color:lighten($bg1,5%);
+}
+.grid2 li:nth-child(even):hover span:after{
+    color:lighten($bg1,5%);
+}
+.grid1 li:nth-child(even):hover span:after{
+    color:lighten($bg2,5%);
+}
+.grid2 li:nth-child(odd):hover span:after{
+    color:lighten($bg2,5%);
+}
+
